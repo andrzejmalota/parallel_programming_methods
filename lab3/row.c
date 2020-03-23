@@ -20,7 +20,10 @@ long long int get_num_pts_circle(long long int num_pts_square)
     return num_pts_circle;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ca70103786c264f80e48308a26e348797448c8
 int main(int argc, char ** argv) {
     MPI_Init(NULL, NULL);
     int world_rank;
