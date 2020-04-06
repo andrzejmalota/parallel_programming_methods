@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab5/MPR-spark-lab01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lab6/MPR-spark-lab02" vcs="Git" />
+  </component>
+</project>
