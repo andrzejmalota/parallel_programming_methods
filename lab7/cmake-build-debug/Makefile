@@ -48,24 +48,13 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrzej/Documents/Studia/Magister/MPR/lab3
+CMAKE_SOURCE_DIR = /home/andrzej/Documents/Studia/Magister/MPR/untitled
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrzej/Documents/Studia/Magister/MPR/lab3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/andrzej/Documents/Studia/Magister/MPR/untitled/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/111/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrzej/Documents/Studia/Magister/MPR/lab3/cmake-build-debug/CMakeFiles /home/andrzej/Documents/Studia/Magister/MPR/lab3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrzej/Documents/Studia/Magister/MPR/untitled/cmake-build-debug/CMakeFiles /home/andrzej/Documents/Studia/Magister/MPR/untitled/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrzej/Documents/Studia/Magister/MPR/lab3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrzej/Documents/Studia/Magister/MPR/untitled/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab3
+# Target rules for targets named untitled
 
 # Build rule for target.
-lab3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lab3
-.PHONY : lab3
+untitled: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 untitled
+.PHONY : untitled
 
 # fast build rule for target.
-lab3/fast:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/build
-.PHONY : lab3/fast
+untitled/fast:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
+.PHONY : untitled/fast
 
-sek.o: sek.c.o
+main.o: main.c.o
 
-.PHONY : sek.o
+.PHONY : main.o
 
 # target to build an object file
-sek.c.o:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/sek.c.o
-.PHONY : sek.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.o
+.PHONY : main.c.o
 
-sek.i: sek.c.i
+main.i: main.c.i
 
-.PHONY : sek.i
+.PHONY : main.i
 
 # target to preprocess a source file
-sek.c.i:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/sek.c.i
-.PHONY : sek.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.i
+.PHONY : main.c.i
 
-sek.s: sek.c.s
+main.s: main.c.s
 
-.PHONY : sek.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-sek.c.s:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/sek.c.s
-.PHONY : sek.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -156,12 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lab3"
-	@echo "... sek.o"
-	@echo "... sek.i"
-	@echo "... sek.s"
+	@echo "... edit_cache"
+	@echo "... untitled"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
