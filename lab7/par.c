@@ -17,14 +17,15 @@ int main(int argc, char *argv[]) {
     for (j=0; j<num_threads; j++) {
 	xi[j] = j;
     } 
-    #pragma omp for
+    #pragma omp for schedule(guided, 8)
     for (i=0; i<N; i++) {
-        vector[i] = (int) erand48(xi) * 100000;
+        vector[i] = (int) erand48(xi) * 10000;
     }
     }
 
     end =  omp_get_wtime();
     t = end - start;
     printf("%g seconds \n", t);
+    free(vector);
     return 0;
 }
